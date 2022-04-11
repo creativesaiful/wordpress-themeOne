@@ -27,13 +27,18 @@ a{
   text-decoration: none;
 }
 
+/* Css Variable for primary color */
+:root{
+  --primary-color: #ea1a70;
+}
 
   
   /*=======================================
    Header Area Style
   ========================================*/
   #header_area {
-    padding: 15px 0;
+    padding-top: 15px;
+    box-shadow: #c0c0c0 0px 1px 10px;
 
   }
   
@@ -56,7 +61,7 @@ a{
     text-decoration: none;
   }
   #header_area .col-md-9 ul li a:hover {
-    background: #ea1a70;
+    background: var(--primary-color);
     color: #fff;
   }
   
@@ -86,7 +91,7 @@ a{
     color: #262626;
   }
   #header_area .col-md-9 ul li:hover a {
-    background: #ea1a70;
+    background: var(--primary-color);
     color: #fff;
   }
   #header_area .col-md-9 ul li:hover ul li a {
@@ -107,7 +112,7 @@ a{
     left: 200px;
   }
   #header_area .col-md-9 ul li ul li:hover a {
-    background: #ea1a70;
+    background: var(--primary-color);
     color: #fff;
   }
   #header_area .col-md-9 ul ul li:hover ul li a {
@@ -115,7 +120,7 @@ a{
     color: #fff;
   }
   #header_area .col-md-9 ul ul li ul li a:hover {
-    background: #ea1a70;
+    background: var(--primary-color);
     color: #fff;
   }
  
@@ -210,12 +215,12 @@ a{
 
 #body_area .blog_area .blog_post_content a:hover {
   transition: .2s;
-  color: #ea1a70;
+  color: var(--primary-color);
 
 }
 
 a.redmore{
-  background: #ea1a70;
+  background: var(--primary-color);
   color: #fff;
   font-size: 15px;
   text-decoration: none;
@@ -243,12 +248,12 @@ a.redmore:hover {
 }
 
 .pagination a.page-numbers:hover {
-  background: #ea1a70;
+  background: var(--primary-color);
   color: #fff;
 }
 
 .pagination .current{
-  background: #ea1a70;
+  background: var(--primary-color);
   color: #fff;
   font-size: 15px;
   text-decoration: none;
@@ -264,7 +269,7 @@ a.redmore:hover {
 /* Calender style  */
 
 .wp-block-calendar a {
-  color: #ea1a70;
+  color: var(--primary-color);
 
 }
 .widget-item h4{
@@ -287,7 +292,7 @@ a.redmore:hover {
 }
 
 .widget-item .wp-block-search__button   {
-  background: #ea1a70;
+  background: var(--primary-color);
   color: #fff;
   font-size: 15px;
   border-radius: 5px;
@@ -307,7 +312,7 @@ a.redmore:hover {
 }
 
 .widget-item .wp-block-latest-posts a:hover{
-  color: #ea1a70;
+  color: var(--primary-color);
   
 }
 .widget-item #menu-footer-menu{
@@ -318,7 +323,7 @@ a.redmore:hover {
 }
 
 .widget-item #menu-footer-menu a:hover{
-  color: #ea1a70;
+  color: var(--primary-color);
 }
 
 .widget-item .wp-block-tag-cloud a{
@@ -334,7 +339,7 @@ a.redmore:hover {
 }
 
 .widget-item .wp-block-tag-cloud a:hover{
-  background-color: #ea1a70;
+  background-color: var(--primary-color);
   
 }
 .widget-item .cat-item a{
@@ -343,16 +348,16 @@ a.redmore:hover {
   margin-bottom: 8px;
 }
 .widget-item .cat-item a:hover {
-  color: #ea1a70;
+  color: var(--primary-color);
 }
 
 .cat-item::marker {
-  color: #ea1a70;
+  color: var(--primary-color);
 }
 
 /* Comment area styling */
 .comment_area .submit{
-  background: #ea1a70;
+  background: var(--primary-color);
   color: #fff;
   font-size: 15px;
   border-radius: 5px;
@@ -393,7 +398,7 @@ a.redmore:hover {
 
 .archive_header h2{
   font-size: 30px;
-  background-color: #ea1a70;
+  background-color: var(--primary-color);
   padding: 5px 15px;
   color: #fff;
 
@@ -416,8 +421,23 @@ a.redmore:hover {
 
 .search_header h2{
   font-size: 30px;
-  background-color: #ea1a70;
+  background-color: var(--primary-color);
   padding: 5px 15px;
   color: #fff;
 
+}
+
+/* 404 page styling */
+
+.error-actions .home_btn{
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: .1s;
+}
+.error-actions .home_btn:hover{
+  background: #262626;
+  color: #fff;
 }

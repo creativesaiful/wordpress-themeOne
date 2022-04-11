@@ -87,6 +87,38 @@ function themeOne_logo_customize_register($wp_customize){
        'section' => 'themeOne_copyright_background_color_section',
        'settings' => 'themeOne_copyright_background_color_setting'
     )));
+
+
+
+    //background color section
+      $wp_customize->add_section('themeOne_background_color_section', array(
+         'title' => __('Theme Color', 'themeOne'),
+         'description' => __('Change the background color', 'themeOne')
+      ));
+
+      $wp_customize->add_setting('themeOne_background_color_setting', array(
+         'default' => '#fff',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'themeOne_background_color_setting', array(
+         'label'=> 'Background Color',
+         'description'=>__('Change the background color', 'themeOne'),
+         'section' => 'themeOne_background_color_section',
+         'settings' => 'themeOne_background_color_setting'
+      )));
+
+      //Primary Color section 
+
+      $wp_customize->add_setting('themeOne_primary_color_setting', array(
+         'default' => '#ea1a70',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'themeOne_primary_color_setting', array(
+         'label'=> 'Primary Color',
+         'description'=>__('Change the primary color', 'themeOne'),
+         'section' => 'themeOne_background_color_section',
+         'settings' => 'themeOne_primary_color_setting'
+      )));
  
  
     
@@ -94,3 +126,19 @@ function themeOne_logo_customize_register($wp_customize){
  }
 
  add_action('customize_register', 'themeOne_logo_customize_register');
+
+ function themeOne_dynamic_color(){
+    ?>
+      <style>
+         body{
+            background-color: <?php echo get_theme_mod('themeOne_background_color_setting', '#fff'); ?>;
+         }
+         :root{
+            --primary-color: <?php echo get_theme_mod('themeOne_primary_color_setting', '#ea1a70'); ?>;
+         }
+      </style>
+    
+    <?php
+ }
+
+ add_action('wp_head', 'themeOne_dynamic_color');
