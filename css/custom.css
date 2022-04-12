@@ -15,6 +15,7 @@ body {
   }
   img {
     max-width: 100%;
+    height: auto;
   }
 p{
   font-family: 'Lato', sans-serif;
@@ -438,6 +439,31 @@ a.redmore:hover {
   transition: .1s;
 }
 .error-actions .home_btn:hover{
+  background: #262626;
+  color: #fff;
+}
+
+/* front page styling  */
+
+.service_child {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: .1s;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.service_child .service_btn{
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: .1s;
+  margin-top: 15px;
+}
+
+.service_child .service_btn:hover{
   background: #262626;
   color: #fff;
 }

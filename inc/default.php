@@ -3,10 +3,11 @@
 add_theme_support('title-tag');
 
 //Thumbnail support
-add_theme_support('post-thumbnails', array('page', 'post'));
+add_theme_support('post-thumbnails', array('page', 'post', 'service'));
 
 //thumbnail size
 add_image_size('post-thumbnails', 970, 350, true);
+add_image_size('service', 330, 250, true);
 
 // Except to 40 Word
 

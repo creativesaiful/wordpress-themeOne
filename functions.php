@@ -17,6 +17,13 @@ include_once ('inc/enqueue.php');
 include_once('inc/theme_functions.php');
 
 
+//Custom post type
+include_once('inc/custom_post.php');
+
+
+//short code 
+
+include_once('inc/shortcode.php');
 
 //Menu section
 
